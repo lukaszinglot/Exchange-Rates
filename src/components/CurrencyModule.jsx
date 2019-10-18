@@ -71,18 +71,17 @@ class CurrencyModule extends Component {
 
   render() {
     const { open, inputTextValue, inputNumberValue } = this.state;
-    const { currency } = this.props;
+    const { currency, exchanged, rate, deleteExchangeCreator } = this.props;
     return (
       <div>
         <div className="yellow"></div>
         {currency.rates ? (
           <TransactionsList
-            list={this.props.exchanged}
-            rate={this.props.rate}
+            list={exchanged}
+            rate={rate}
             currency={currency.rates}
-            click={this.props.deleteExchangeCreator}
+            click={deleteExchangeCreator}
             onChange={this.defineRate}
-            value={this.props.rate}
           />
         ) : null}
         <div>
@@ -98,7 +97,7 @@ class CurrencyModule extends Component {
             text="Dodaj transakcję"
           />
         </div>
-        <Footer date={this.props.currency.date} />
+        <Footer date={currency.date} />
       </div>
     );
   }
