@@ -2,7 +2,7 @@ import React from "react";
 import HighestTransaction from "./HighestTransaction";
 import ActualCurrency from "./ActualCurrency";
 
-const TransactionsList = props => {
+const TransactionsList = ({ list, click, currency, rate, onChange }) => {
   let total = 0;
   return (
     <div className="flex-pasek">
@@ -12,13 +12,13 @@ const TransactionsList = props => {
             <div className="header-list-top">Poprzednie transakcje:</div>
           </div>
 
-          {props.list.lenght !== 0
-            ? props.list.map(element => (
+          {list.lenght !== 0
+            ? list.map(element => (
                 <div
                   key={element.value}
                   className="ui middle aligned animated list"
                 >
-                  <div className="item" onClick={() => props.click(element.id)}>
+                  <div className="item" onClick={() => click(element.id)}>
                     <div className="content-list">
                       <p className="header-list">{element.name}</p>
                       <p className="header-value">
@@ -26,18 +26,15 @@ const TransactionsList = props => {
                       </p>
                       <p className="header-rate">
                         Wartość w PLN:{" "}
-                        {props.rate
+                        {rate
                           ? (total +=
-                              Math.round(element.value * props.rate * 100) /
-                              100) &&
-                            Math.round(element.value * props.rate * 100) / 100
+                              Math.round(element.value * rate * 100) / 100) &&
+                            Math.round(element.value * rate * 100) / 100
                           : (total +=
-                              Math.round(
-                                element.value * props.currency.PLN * 100
-                              ) / 100) &&
-                            Math.round(
-                              element.value * props.currency.PLN * 100
-                            ) / 100}
+                              Math.round(element.value * currency.PLN * 100) /
+                              100) &&
+                            Math.round(element.value * currency.PLN * 100) /
+                              100}
                       </p>
                     </div>
                   </div>
@@ -51,12 +48,8 @@ const TransactionsList = props => {
           </div>
         </div>
       </div>
-      <HighestTransaction
-        props={props.list}
-        onChange={props.onChange}
-        value={props.rate}
-      />
-      <ActualCurrency currency={props.currency} />
+      <HighestTransaction props={list} onChange={onChange} value={rate} />
+      <ActualCurrency currency={currency} />
     </div>
   );
 };
