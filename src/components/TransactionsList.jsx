@@ -13,28 +13,22 @@ const TransactionsList = ({ list, click, currency, rate, onChange }) => {
           </div>
 
           {list.lenght !== 0
-            ? list.map(element => (
-                <div
-                  key={element.value}
-                  className="ui middle aligned animated list"
-                >
-                  <div className="item" onClick={() => click(element.id)}>
+            ? list.map(({ id, name, value }) => (
+                <div key={value} className="ui middle aligned animated list">
+                  <div className="item" onClick={() => click(id)}>
                     <div className="content-list">
-                      <p className="header-list">{element.name}</p>
+                      <p className="header-list">{name}</p>
                       <p className="header-value">
-                        Wartość w EUR: {(" ", element.value)}
+                        Wartość w EUR: {(" ", value)}
                       </p>
                       <p className="header-rate">
                         Wartość w PLN:{" "}
                         {rate
-                          ? (total +=
-                              Math.round(element.value * rate * 100) / 100) &&
-                            Math.round(element.value * rate * 100) / 100
+                          ? (total += Math.round(value * rate * 100) / 100) &&
+                            Math.round(value * rate * 100) / 100
                           : (total +=
-                              Math.round(element.value * currency.PLN * 100) /
-                              100) &&
-                            Math.round(element.value * currency.PLN * 100) /
-                              100}
+                              Math.round(value * currency.PLN * 100) / 100) &&
+                            Math.round(value * currency.PLN * 100) / 100}
                       </p>
                     </div>
                   </div>
