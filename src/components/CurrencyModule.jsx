@@ -98,12 +98,6 @@ class CurrencyModule extends Component {
             text="Dodaj transakcję"
           />
         </div>
-        {/* <input
-          type="number"
-          step="0.01"
-          onChange={this.defineRate}
-          value={this.props.rate}
-        /> */}
         <Footer date={this.props.currency.date} />
       </div>
     );
