@@ -1,0 +1,4 @@
+export const FETCH_CURRENCY = "FETCH_CURRENCY";
+export const ADD_EXCHANGE = "ADD_EXCHANGE";
+export const DEFINE_RATE = "DEFINE_RATE";
+export const DELETE_EXCHANGE = "DELETE_EXCHANGE";
