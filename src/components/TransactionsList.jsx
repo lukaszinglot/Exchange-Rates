@@ -54,7 +54,7 @@ const TransactionsList = props => {
       <HighestTransaction
         props={props.list}
         onChange={props.onChange}
-        value={props.value}
+        value={props.rate}
       />
       <ActualCurrency currency={props.currency} />
     </div>
