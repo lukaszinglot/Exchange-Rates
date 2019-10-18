@@ -1,0 +1,191 @@
+/* body {
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/tex2res4.png);
+    background-color: "black";
+} */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2085D0;
+
+}
+
+.ui.modal {
+    width: 400px;
+    height: 286px;
+}
+
+.ui.input {
+    max-width: 286px;
+    margin-left: 57px;
+    margin-bottom: 5px;
+}
+
+.ui.form textarea {
+    margin-left: 57px;
+    min-height: 100px;
+    min-width: 286px;
+    max-height: 100px;
+    max-width: 286px;
+}
+
+.ui.modal .actions {
+    text-align: right;
+}
+
+.ui.modal header {
+    text-align: center
+}
+
+.list-top {
+    width: 50%;
+    border: 1px solid black;
+    border-right: 1px solid yellow;
+}
+
+.list {
+    width: 50%;
+
+}
+
+.header-list-top {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-size: 28px;
+    transform: translate(0, -50%);
+}
+
+.content-list-top {
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+
+.content-list {
+    height: 50px;
+    border: 1px solid black;
+    width: 200%;
+    background-color: yellow;
+}
+
+.header-list {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 20px;
+    width: calc(100%/3);
+    text-transform: uppercase;
+}
+
+.header-value {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 20px;
+    width: calc(100%/3)
+}
+
+.header-rate {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: left;
+    font-size: 20px;
+    width: calc(100%/3);
+}
+
+.content-bottom {
+    height: 50px;
+    border: 1px solid black;
+    background-color: yellow;
+    text-align: left;
+    margin-top: 14px;
+}
+
+.header-bottom {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 20px;
+    width: calc(100%/3);
+    float: right;
+    font-size: 22px;
+}
+
+.content-list:hover {
+    background-color: black;
+    color: white
+}
+
+
+.plus {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: black;
+}
+
+.plus:hover {
+    cursor: pointer;
+}
+
+.yellow {
+    height: 10px;
+    background-color: yellow;
+}
+
+.flex-pasek {
+    display: flex;
+}
+
+.big-top {
+    width: 30%;
+    border: 1px solid black;
+    border-left: 1px solid yellow;
+    border-right: 1px solid yellow;
+
+}
+
+.float-left {
+    height: 60px;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    text-align: center;
+    line-height: 210%;
+}
+
+.actual-currency {
+    height: 60px;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    text-align: center;
+    line-height: 210%;
+}
+
+.currency-top {
+    width: 20%;
+    border: 1px solid black;
+    border-left: 1px solid yellow;
+}
+
+.biggest-value {
+    background-color: yellow;
+    height: 50px;
+    margin-top: 14px;
+    border: 1px solid black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 160%;
+}
+
+.current {
+    font-size: 20px;
+    text-align: center;
+    line-height: 220%;
+}
